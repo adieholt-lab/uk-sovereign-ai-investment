@@ -90,7 +90,7 @@ input[type="number"], select {
 </style></head><body>
 <main>
 <h1 id="heading">UK Sovereign AI Industry Investment Benefit</h1>
-<p class="build" id="build-id"><span class="build-tag">Build R2.5</span> 2040 capability milestone &#183; chart extends to 2045</p>
+<p class="build" id="build-id"><span class="build-tag">Build R2.5</span> 2040 independent capability milestone &#183;</p>
 <section class="panel">
   <div class="chart-bar">
     <strong id="view-title">UK GVA including wider effects</strong>
@@ -100,7 +100,7 @@ input[type="number"], select {
   </div>
   <svg id="chart" viewBox="0 0 1000 550" role="img" aria-label="Interactive UK AI economic scenario chart"></svg>
   <div id="legend" class="legend"></div>
-  <p class="delta-note" id="delta-note">Arrows show the annual difference between the two GVA scenarios, not investment payback.</p>
+  <p class="delta-note" id="delta-note">Arrows show the annual difference between the two GVA scenarios.</p>
   <p class="chart-caption"><strong>Illustrative scenarios, not forecasts.</strong> Spending is customer revenue; GVA is value created after purchased inputs. They must not be added. Foreign-owned suppliers can create UK GVA. The two spending lines show the investment scenario; a foreign supplier payment is not necessarily a statistical import or wholly lost to the UK.</p>
   <p class="chart-caption" id="coverage-note"></p>
   <p class="chart-caption" id="timing-note"><strong>2040 milestone.</strong> The shaded 2041&#8211;2045 section continues the same growth and capture trends; market shares and UK value retention are capped at their limits. Export and optional productivity targets keep their separately labelled 2045 dates.</p>
@@ -124,7 +124,7 @@ input[type="number"], select {
 
 <section class="panel">
   <div class="chart-bar"><h2 style="margin:0">Where the economic value comes from</h2><label class="year-label" for="audit-year">Show year <select id="audit-year"><option>2025</option><option>2026</option><option>2030</option><option>2035</option><option selected>2040</option><option>2045</option></select></label></div>
-  <p class="audit-note">Every figure below is annual &#163;bn. The industry subtotal and wider total correspond to the two chart views. The wider total adds <em>value added</em>, never supplier sales or wages a second time.</p>
+  <p class="audit-note">Figure annual &#163;bn. The industry subtotal and wider total correspond to the two chart views. The wider total adds <em>value added</em>, never supplier sales or wages a second time.</p>
   <div class="table-wrap"><table class="audit" id="audit-table"><thead><tr><th scope="col">Economic component</th><th scope="col">Do nothing</th><th scope="col">Investment</th><th scope="col">Difference</th></tr></thead><tbody id="audit-body"></tbody></table></div>
   <h3 id="bridge-heading">What explains the gap?</h3>
   <div class="delta-breakdown" id="delta-breakdown"></div>
@@ -134,7 +134,7 @@ input[type="number"], select {
 <section class="panel">
 <details class="model-notes scenario-editor" id="scenario-details">
   <summary>Wider-industry assumptions &#8212; inspect or change</summary>
-  <p>These are <strong>explicit illustrative assumptions</strong>, not estimates proved by the source studies. The original four sliders stay above. There are no additional sliders here.</p>
+  <p>These are <strong>explicit illustrative assumptions</strong>, not estimates proved by the source studies.</p>
   <div class="assumption-grid" id="assumption-fields"></div>
   <button type="button" id="capture-only">Test capture alone</button><button type="button" id="restore-assumptions">Restore wider-industry assumptions</button>
   <p class="foot">&#8220;Test capture alone&#8221; sets additional exports, extra AI-stack retention, household circulation and extra productivity to zero. Supply-chain value is still included in both scenarios. The main sliders are unchanged.</p>
@@ -187,7 +187,7 @@ input[type="number"], select {
   <h2>Downloads and settings</h2>
   <div class="export-buttons"><button type="button" id="save-svg">Download chart as SVG</button><button type="button" id="save-csv">Download chart data (CSV)</button><button type="button" id="save-settings">Download settings (JSON)</button><button type="button" id="load-settings">Load settings</button><button type="button" id="print-chart">Print / save as PDF</button><button type="button" id="reset-model">Reset</button></div>
   <input id="upload" type="file" accept="application/json" hidden>
-  <p class="foot">Standalone; works offline. Save JSON settings to keep your changes. SVG exports include the active GVA view, legend and scenario settings. CSV exports include both GVA views and every accounting component.</p>
+  <p class="foot">SVG exports include the active GVA view, legend and scenario settings. CSV exports include both GVA views and every accounting component.</p>
   <p class="status" id="status" role="status" aria-live="polite"></p>
 </section>
 </main>
