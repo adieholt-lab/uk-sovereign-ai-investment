@@ -90,7 +90,7 @@ input[type="number"], select {
 </style></head><body>
 <main>
 <h1 id="heading">UK Sovereign AI Industry Investment Benefit</h1>
-<p class="build" id="build-id"><span class="build-tag">Build R2.5</span> 2040 independent AI stack milestone &#183;</p>
+<p class="build" id="build-id">2040 independent AI stack milestone</p>
 <section class="panel">
   <div class="chart-bar">
     <strong id="view-title">UK GVA including wider effects</strong>
@@ -148,7 +148,7 @@ input[type="number"], select {
   <div class="table-wrap"><table><thead><tr><th>Input</th><th>Value and status</th></tr></thead><tbody>
     <tr><td>2025 UK AI industry GVA reference</td><td>&#163;18.6bn, estimated in the government's 2025 sector study, published 29 October 2026 [1]. Includes businesses operating in the UK, not only British-owned businesses.</td></tr>
     <tr><td>2025 UK AI expenditure reference</td><td>&#163;30.3bn, a central <strong>projection published in 2022</strong>, not observed 2025 spending [2]. It concerns business AI technology purchases; a separately verified consumer total is not added.</td></tr>
-    <tr><td>Spending growth: initial setting</td><td>8.4% annually, carried forward as an illustrative setting. The original source applies 8.4% over 2020&#8211;2040; extending it from 2025 to 2045 is <strong>not that source's forecast</strong> [2].</td></tr>
+    <tr><td>Spending growth: initial setting</td><td>8.4% annually, an illustrative setting. The original source applies 8.4% over 2020&#8211;2040; extending it from 2025 to 2045 is <strong>not that source's forecast</strong> [2].</td></tr>
     <tr><td>Starting overseas supplier share</td><td>65% reference assumption, not a measured national expenditure share. ONS describes the outstanding AI trade-measurement gap [4]. The model classifies suppliers, not formal balance-of-payments imports.</td></tr>
     <tr><td>AI-industry GVA per &#163;1 of UK-supplier customer revenue</td><td>55p, illustrative. Close to the sector-wide GVA/revenue ratio in [1], but <strong>not evidence of a marginal return</strong>. It represents UK AI value across the stack, counted once.</td></tr>
     <tr><td>AI-industry UK GVA per &#163;1 paid to a foreign supplier</td><td>15p, illustrative, allowing for UK operations and AI suppliers. The model does not assume all foreign-company revenue leaves the UK.</td></tr>
@@ -159,9 +159,9 @@ input[type="number"], select {
     <tr><td>Household-spending and additional productivity effects</td><td>Both start at zero. They require independent evidence, are optional, and are never attributed automatically to buying British. Ordinary AI-use productivity common to both scenarios is not quantified.</td></tr>
   </tbody></table></div>
   <h3>2040 targets and the 2041&#8211;2045 continuation</h3>
-  <p>Market-share capture and the AI-stack retention uplift now reach their specified targets in <strong>2040</strong>, 15 years after 2025. The headline comparison and default component table also use 2040. The spending and export-growth rates, other assumptions, and baseline calculation have not changed.</p>
+  <p>Market-share capture and the AI-stack retention uplift reach their specified targets in <strong>2040</strong>, 15 years after 2025. The headline comparison and default component table also use 2040.</p>
   <p>The market-capture increase is the chosen percentage-point gain multiplied by (year &#8722; 2025) / 15, capped at the starting foreign share. The AI-stack retention increase follows the same timing, capped at 90p industry GVA per &#163;1 so that the separate 10p non-AI supply component never takes production GVA above revenue. Targets are milestones, not a freeze: the same trends continue from 2041 to 2045 until these limits are reached. An eventual change in slope at a physical limit is intentional.</p>
-  <p>Total UK expenditure and existing export/other activity keep compounding at their selected annual growth rates. The additional-export and optional productivity inputs retain their explicitly labelled <strong>2045</strong> targets and their existing curves; they have not been silently brought forward. Neither the 2040 milestone nor the later extrapolation is a validated forecast.</p>
+  <p>Total UK expenditure and existing export/other activity keep compounding at their selected annual growth rates. The additional-export and optional productivity inputs use their separately labelled <strong>2045</strong> targets. Neither the 2040 milestone nor the later extrapolation is a validated forecast.</p>
   <h3>How the model reconciles</h3>
   <p>Let S be total UK customer spending, o the starting foreign share, and c the progressively captured share. The no-intervention customer revenues are D<sub>A</sub> = S(1 &#8722; o) and F<sub>A</sub> = So. With investment they are D<sub>B</sub> = D<sub>A</sub> + Sc and F<sub>B</sub> = F<sub>A</sub> &#8722; Sc. Both pairs add to S.</p>
   <p>R is the calibrated export/other revenue proxy, grown at the fourth slider's rate. E is additional export revenue. Let v = 0.55 plus the phased increase in domestic AI-stack retention. <strong>Industry GVA A = 0.55(D<sub>A</sub> + R) + 0.15F<sub>A</sub>.</strong> <strong>Industry GVA B = v(D<sub>B</sub> + R + E) + 0.15F<sub>B</sub>.</strong> Thus captured sales initially add only 55p &#8722; 15p = <strong>40p net UK industry GVA per &#163;1</strong>, before deeper retention.</p>
@@ -202,7 +202,7 @@ const SPECS = Object.freeze([
  {key:'overseas',label:'Starting overseas spending share',min:0,max:100,step:1,unit:'%',decimals:0,hint:'Share of UK customer expenditure paid to foreign suppliers in the starting scenario.'},
  {key:'shift',label:'Overseas market share captured by UK suppliers by 2040',min:0,max:100,step:1,unit:' pp',decimals:0,hint:"The top-right figure is UK suppliers' share in 2040. For example, 65% UK means 35% foreign. The trend continues to 2045, capped at 100% UK."},
  {key:'growth',label:'UK AI spending growth',min:0,max:15,step:0.2,unit:'%',decimals:1,hint:'Annual growth in UK customer purchases. Both scenarios have the same total spending.'},
- {key:'baselineGrowth',label:'Export / other AI activity growth',min:0,max:15,step:1,unit:'%',decimals:0,hint:'Underlying annual growth in existing export/other activity, common to both scenarios. Previously the do-nothing GVA growth control.'}
+ {key:'baselineGrowth',label:'Export / other AI activity growth',min:0,max:15,step:1,unit:'%',decimals:0,hint:'Underlying annual growth in existing export/other activity, common to both scenarios.'}
 ]);
 const ASSUMPTION_DEFAULTS = Object.freeze({extraExports2045:20, stackUplift:10, inducedPercent:0, productivity2045:0});
 const ASSUMPTION_SPECS = Object.freeze([
@@ -486,7 +486,7 @@ function renderAudit(rows){
  const target=document.getElementById('delta-breakdown');target.replaceChildren();
  bridge.forEach(([label,value])=>{const box=document.createElement('div');box.className='delta-item';box.append(document.createTextNode(label));const strong=document.createElement('strong');strong.textContent=money(value,true);box.append(strong);target.append(box)});
  const sum=bridge.reduce((v,item)=>v+item[1],0);
- document.getElementById('audit-equation').textContent=`The six components sum to ${money(sum,true)} a year in ${chosen}. Figures are rounded for display; calculations use unrounded values. A larger GVA figure than domestic spending is possible because exports and other effects have a different scope; it is not required.`;
+ document.getElementById('audit-equation').textContent=`The six components sum to ${money(sum,true)} a year in ${chosen}. Figures are rounded for display; calculations use unrounded values.`;
 }
 function syncAssumptions(){
  assumptions=normaliseAssumptions(assumptions);
@@ -547,7 +547,7 @@ function saveSVG(){
  const svg=node('svg',{xmlns:'http://www.w3.org/2000/svg',width:1000,height:805,viewBox:'0 0 1000 805','font-family':'Arial, sans-serif'});
  svg.append(node('rect',{width:1000,height:805,fill:'#fff'}));
  svg.append(node('text',{x:32,y:35,'font-size':24,'font-weight':'bold',fill:'#18212e'},'UK Sovereign AI Industry Investment Benefit'));
- svg.append(node('text',{x:32,y:61,'font-size':14,fill:'#526073'},`${view==='industry'?'AI industry GVA only':'UK GVA including wider effects'} | Illustrative scenario, not a forecast | ${BUILD}`));
+ svg.append(node('text',{x:32,y:61,'font-size':14,fill:'#526073'},`${view==='industry'?'AI industry GVA only':'UK GVA including wider effects'} | Illustrative scenario, not a forecast`));
  const chart=document.getElementById('chart').cloneNode(true);chart.setAttribute('x','0');chart.setAttribute('y','75');chart.setAttribute('width','1000');chart.setAttribute('height','550');svg.append(chart);
  chartSeries().forEach((s,i)=>{const x=32+(i%2)*480,y=643+Math.floor(i/2)*25;svg.append(node('line',{x1:x,y1:y-5,x2:x+24,y2:y-5,stroke:s.color,'stroke-width':4,...(s.key==='baseline'?{'stroke-dasharray':'7 4'}:{})}));svg.append(node('text',{x:x+34,y,'font-size':13,fill:'#18212e'},s.label))});
  const lines=[
@@ -575,7 +575,7 @@ async function loadSettings(event){
   const nextState=normalise(values);
   const nextAssumptions=normaliseAssumptions(parsed.assumptions&&typeof parsed.assumptions==='object'?parsed.assumptions:ASSUMPTION_DEFAULTS);
   state=nextState;assumptions=nextAssumptions;view=parsed.view==='industry'?'industry':'wider';render();
-  status(parsed.fixedAssumptions?.targetYear===FIXED.targetYear?'Settings loaded; 2040 targets and all limits checked.':'Settings loaded into R2.5: the same capture and stack-uplift targets now apply to 2040, with extrapolation to 2045. Export/productivity inputs retain their 2045 dates.');
+  status(parsed.fixedAssumptions?.targetYear===FIXED.targetYear?'Settings loaded; 2040 targets and all limits checked.':'Settings loaded. Capture and AI-stack retention targets apply to 2040, with extrapolation to 2045. Export and productivity targets apply to 2045.');
  }catch(error){status('Could not load settings: '+error.message)}finally{event.target.value=''}
 }
 function reset(){state={...DEFAULTS};assumptions={...ASSUMPTION_DEFAULTS};view='wider';document.getElementById('audit-year').value=String(FIXED.targetYear);render();status('Defaults restored; 2040 targets and comparison, with the chart extending to 2045.');}
